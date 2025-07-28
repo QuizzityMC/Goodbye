@@ -4,31 +4,42 @@
 <title>Goodbye</title>
 <style>
 body {
-  background-color: black;
+  background-color: #000; /* Pure black */
   display: flex;
   justify-content: center;
   align-items: center;
   height: 100vh;
   margin: 0;
-  overflow: hidden; /* Hide scrollbars */
+  overflow: hidden;
 }
 
 .goodbye-text {
-  font-family: "Creepster", cursive; /* Or another suitably "evil" font */
-  font-size: 100px;
-  color: red; /* Or another eerie color */
-  text-shadow: 4px 4px 8px rgba(255, 0, 0, 0.5); /* Add a spooky shadow */
-  animation: fadeOut 5s forwards; /* Fade out over 5 seconds */
+  font-family: 'Nosifer', cursive; /* VERY menacing font */
+  font-size: 120px; /* Make it larger */
+  color: #FF0000; /* Bright red */
+  text-shadow: 6px 6px 12px #440000, -6px -6px 12px #440000; /* Deeper, more intense shadow */
+  animation: flickerFadeOut 5s forwards; /* Use a flicker fade animation */
+  letter-spacing: -5px; /* Bring letters closer, unsettling */
 }
 
-@keyframes fadeOut {
-  0% { opacity: 1; }
-  99% {opacity: 1;}
-  100% { opacity: 0; }
+@keyframes flickerFadeOut {
+  0% { opacity: 0; text-shadow: 6px 6px 12px #440000, -6px -6px 12px #440000; } /* Start invisible */
+  10% { opacity: 1; text-shadow: 6px 6px 12px #440000, -6px -6px 12px #440000; } /* Quick flicker in */
+  20% { opacity: 0.8; text-shadow: 4px 4px 8px #440000, -4px -4px 8px #440000; }
+  30% { opacity: 1; text-shadow: 6px 6px 12px #440000, -6px -6px 12px #440000; }
+  40% { opacity: 0.6; text-shadow: 2px 2px 4px #440000, -2px -2px 4px #440000; }
+  50% { opacity: 1; text-shadow: 6px 6px 12px #440000, -6px -6px 12px #440000; }
+  60% { opacity: 0.7; text-shadow: 3px 3px 6px #440000, -3px -3px 6px #440000; }
+  70% { opacity: 1; text-shadow: 6px 6px 12px #440000, -6px -6px 12px #440000; }
+  80% { opacity: 0.5; text-shadow: 1px 1px 2px #440000, -1px -1px 2px #440000; }
+  90% { opacity: 0.2; text-shadow: 1px 1px 2px #440000, -1px -1px 2px #440000; }
+  99% {opacity: 0.0;}
+  100% { opacity: 0; text-shadow: none; } /* Fade completely out */
 }
 
-/* Include the Creepster font from Google Fonts */
-@import url('https://fonts.googleapis.com/css2?family=Creepster&display=swap');
+/* Include the Nosifer font from Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Nosifer&display=swap');
+
 </style>
 </head>
 <body>
