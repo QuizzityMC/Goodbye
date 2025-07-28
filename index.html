@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Goodbye</title>
+<style>
+body {
+  background-color: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  overflow: hidden; /* Hide scrollbars */
+}
+
+.goodbye-text {
+  font-family: "Creepster", cursive; /* Or another suitably "evil" font */
+  font-size: 100px;
+  color: red; /* Or another eerie color */
+  text-shadow: 4px 4px 8px rgba(255, 0, 0, 0.5); /* Add a spooky shadow */
+  animation: fadeOut 5s forwards; /* Fade out over 5 seconds */
+}
+
+@keyframes fadeOut {
+  0% { opacity: 1; }
+  99% {opacity: 1;}
+  100% { opacity: 0; }
+}
+
+/* Include the Creepster font from Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Creepster&display=swap');
+</style>
+</head>
+<body>
+  <div class="goodbye-text">GOODBYE</div>
+</body>
+</html>
