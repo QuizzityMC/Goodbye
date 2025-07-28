@@ -1,48 +1,80 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>Goodbye</title>
-<style>
-body {
-  background-color: #000; /* Pure black */
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-  margin: 0;
-  overflow: hidden;
-}
+    <title>Goodbye</title>
+    <style>
+        body {
+            background-color: #222; /* Darker background */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            overflow: hidden;
+            background-image: url('https://i.imgur.com/YOUR_SCREAMING_FACE_IMAGE.png'); /* Replace with URL */
+            background-size: cover; /* Cover the entire background */
+            background-position: center;
+            opacity: 0; /* Start invisible */
+            animation: fadeIn 0.5s forwards, flickerFadeOut 5s 0.5s forwards; /* Fade in the screaming face, then flicker fade */
+        }
 
-.goodbye-text {
-  font-family: 'Nosifer', cursive; /* VERY menacing font */
-  font-size: 120px; /* Make it larger */
-  color: #FF0000; /* Bright red */
-  text-shadow: 6px 6px 12px #440000, -6px -6px 12px #440000; /* Deeper, more intense shadow */
-  animation: flickerFadeOut 5s forwards; /* Use a flicker fade animation */
-  letter-spacing: -5px; /* Bring letters closer, unsettling */
-}
+        .goodbye-text {
+            font-family: 'Rubik Distressed', cursive; /* VERY Distressed Font */
+            font-size: 160px; /* Even Larger */
+            color: #FF4500; /* Orangered - more alarming */
+            text-shadow: 8px 8px 16px #000000, -8px -8px 16px #000000; /* Deeper Shadows */
+            position: absolute; /* Position it over the face */
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            z-index: 1; /* Ensure text is on top */
+            opacity: 0; /* Start invisible */
+            animation: textFadeIn 0.5s 0.25s forwards, textFlickerFadeOut 5s 0.75s forwards; /* Start a bit later */
+            letter-spacing: -8px; /* Tighter Letter Spacing */
+        }
 
-@keyframes flickerFadeOut {
-  0% { opacity: 0; text-shadow: 6px 6px 12px #440000, -6px -6px 12px #440000; } /* Start invisible */
-  10% { opacity: 1; text-shadow: 6px 6px 12px #440000, -6px -6px 12px #440000; } /* Quick flicker in */
-  20% { opacity: 0.8; text-shadow: 4px 4px 8px #440000, -4px -4px 8px #440000; }
-  30% { opacity: 1; text-shadow: 6px 6px 12px #440000, -6px -6px 12px #440000; }
-  40% { opacity: 0.6; text-shadow: 2px 2px 4px #440000, -2px -2px 4px #440000; }
-  50% { opacity: 1; text-shadow: 6px 6px 12px #440000, -6px -6px 12px #440000; }
-  60% { opacity: 0.7; text-shadow: 3px 3px 6px #440000, -3px -3px 6px #440000; }
-  70% { opacity: 1; text-shadow: 6px 6px 12px #440000, -6px -6px 12px #440000; }
-  80% { opacity: 0.5; text-shadow: 1px 1px 2px #440000, -1px -1px 2px #440000; }
-  90% { opacity: 0.2; text-shadow: 1px 1px 2px #440000, -1px -1px 2px #440000; }
-  99% {opacity: 0.0;}
-  100% { opacity: 0; text-shadow: none; } /* Fade completely out */
-}
+        @keyframes fadeIn {
+            0% { opacity: 0; }
+            100% { opacity: 0.3; } /* Subtle Screaming Face */
+        }
 
-/* Include the Nosifer font from Google Fonts */
-@import url('https://fonts.googleapis.com/css2?family=Nosifer&display=swap');
+        @keyframes flickerFadeOut {
+            0% { opacity: 0.3; }
+            10% { opacity: 0.4; }
+            20% { opacity: 0.2; }
+            30% { opacity: 0.5; }
+            40% { opacity: 0.1; }
+            50% { opacity: 0.6; }
+            60% { opacity: 0.2; }
+            70% { opacity: 0.4; }
+            80% { opacity: 0.1; }
+            90% { opacity: 0; }
+            100% { opacity: 0; }
+        }
 
-</style>
+        @keyframes textFadeIn {
+            0% { opacity: 0; }
+            100% { opacity: 1; }
+        }
+
+        @keyframes textFlickerFadeOut {
+            0% { opacity: 1; text-shadow: 8px 8px 16px #000000, -8px -8px 16px #000000; }
+            10% { opacity: 0.8; text-shadow: 6px 6px 12px #000000, -6px -6px 12px #000000; }
+            20% { opacity: 1; text-shadow: 8px 8px 16px #000000, -8px -8px 16px #000000; }
+            30% { opacity: 0.7; text-shadow: 4px 4px 8px #000000, -4px -4px 8px #000000; }
+            40% { opacity: 1; text-shadow: 8px 8px 16px #000000, -8px -8px 16px #000000; }
+            50% { opacity: 0.6; text-shadow: 2px 2px 4px #000000, -2px -2px 4px #000000; }
+            60% { opacity: 1; text-shadow: 8px 8px 16px #000000, -8px -8px 16px #000000; }
+            70% { opacity: 0.5; text-shadow: 1px 1px 2px #000000, -1px -1px 2px #000000; }
+            80% { opacity: 1; text-shadow: 8px 8px 16px #000000, -8px -8px 16px #000000; }
+            90% { opacity: 0; }
+            100% { opacity: 0; }
+        }
+
+        @import url('https://fonts.googleapis.com/css2?family=Rubik+Distressed&display=swap');
+    </style>
 </head>
 <body>
-  <div class="goodbye-text">GOODBYE</div>
+    <div class="goodbye-text">GOODBYE</div>
 </body>
 </html>
